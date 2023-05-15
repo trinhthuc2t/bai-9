@@ -1,10 +1,10 @@
-let view = document.getElementById('nhap');
+let nhap = document.getElementById('nhap');
 function inputValue(value) {
-    view.value += value;
+    nhap.value += value;
 }
-function kq() {
-    let kq = eval(nhap.value);
-    nhap.value = kq;
+function bang() {
+    let bang = eval(nhap.value);
+    nhap.value = bang;
 }
 function xoa() {
     nhap.value = "";
