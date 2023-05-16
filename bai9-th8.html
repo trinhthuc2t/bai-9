@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<!--Bài 6: Giải phương trình bậc 1.-->
+
+<!--
+<h2>Giải phương trình bậc nhất</h2>
+<label>a = <input type="text" id="a"> </label>
+<br><br>
+<label>b = <input type="text" id="b"></label>
+<br><br>
+<button onclick="ketqua()" style="width: 200px">Kết quả</button>
+<p id="kq"></p>-->
+
+ <!--  Bài 1: Chuyển từ độ C sang độ F
+<input type="text" id="nhap1">oC</label>
+<button onclick="doi()">Chuyển đổi</button>
+<p id="a">KQ:</p>
+-->
+
+
+
+
+<!--Bài 7: Giải phương trình bậc 2.-->
+<label><input type="text" id="a" >x^2 +</label>
+<label><input type="text" id="b">x +</label>
+<label><input type="text" id="c">= 0</label><br><br>
+<button onclick="kqc()" style="width: 200px">Kết quả</button>
+<p id="kq"></p>
+<script>
+  // Bài 1: Chuyển từ độ C sang độ F
+
+ /* let a = document.getElementById('nhap1').value;
+  function doi() {
+    x = a*9/5 +32;
+    document.getElementById('a').innerHTML = "KQ: " + x +" oF" ;
+
+  }*/
+
+// Bài 6: Giải phương trình bậc 1.
+
+
+ /*function ketqua() {
+     let a = parseFloat(document.getElementById("a").value);
+     let b = parseFloat(document.getElementById("b").value);
+     if (a===0) {
+         if (b===0) {
+             document.getElementById('kq').innerHTML = "Vô số nghiệm";
+         } else {
+             document.getElementById('kq').innerHTML = "Vô nghiệm";
+         }
+
+     } else {
+        x = (0-b)/a;
+         document.getElementById('kq').innerHTML = "x = " + x;
+     }
+ }
+*/
+
+
+
+  // Bài 7: Giải phương trình bậc 2
+
+  function kqc() {
+      let a = document.getElementById('a').value;
+      let b = document.getElementById('b').value;
+      let c = document.getElementById('c').value;
+      delta = parseFloat( a**2 - 4*a*c );
+      if (delta < 0) {
+          document.getElementById('kq').innerHTML = "Phương trình vô nghiệm"
+      }else if (delta = 0) {
+          x = -b/(2*a);
+          document.getElementById('kq').innerHTML = "Phương trình có nghiệm kép x1 = x2 = " + x;
+      } else {
+          x1 = ((0-b) - Math.sqrt(delta))/(2*a);
+          x2 = ((0-b) + Math.sqrt(delta))/(2*a);
+          document.getElementById('kq').innerHTML = "Phương trình có 2 nghiệm: x1 = " +x1 +", x2= "+x2;
+      }
+  }
+</script>
+</body>
+</html>

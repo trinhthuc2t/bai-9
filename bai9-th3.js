@@ -1,6 +1,6 @@
 let nhap = document.getElementById('nhap');
-function inputValue(value) {
-    nhap.value += value;
+function inputValue(abc) {
+    nhap.value += abc;
 }
 function bang() {
     let bang = eval(nhap.value);
